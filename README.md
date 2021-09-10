@@ -3,7 +3,7 @@
 Book Store app is a practice project, which includes manipulate dynamically the Virtual DOM and, uses Redux to keep all application's data on a single source of truth that can be read and written for all application's components. Built with React, Redux, JavaScript, HTML5, CSS3, and Prop-types.
 
 ## Live Link Demo
-
+[live demo heroku](https://bookstoreredux2021.herokuapp.com/)
 
 ## Built With
 - React
