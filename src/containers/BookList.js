@@ -2,13 +2,22 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
 const BookList = ({ books }) => (
-    <table>
+    <table className="table">
+    <thead>
+      <tr>
+        <th scope="col">Num</th>
+        <th scope="col">Title</th>
+        <th scope="col">Category</th>
+      </tr>
+    </thead>
+    <tbody>
       {
         books.map(
-            book => <tr key={book.id}><Book book={book} /></tr>,
+          book => <tr key={book.id}><Book book={book} /></tr>,
         )
       }
-    </table>
+    </tbody>
+  </table>
   );
   
   BookList.propTypes = {
