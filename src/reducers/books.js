@@ -18,7 +18,7 @@ const getRandomIntInclusive = (minimum, maximum) => {
       case CREATE_BOOK:
         return { ...state, book: action.book }
       case REMOVE_BOOK:
-        return state;
+        return state.filter(book => book.id !== action.book.id);
       default:
         return state;
     }
