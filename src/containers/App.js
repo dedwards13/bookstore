@@ -1,19 +1,25 @@
 import BookList from './BookList';
 import BooksForm from '../components/BooksForm';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-const App = () => (
+const App = ({books}) => (
   <div className="App">
-    <BookList books={
-      [
-        { 
-          id: '1', 
-          title: 'React and Redux', 
-          category: 'JavaScript' 
-        }
-      ]
-    } />
+    <BookList books={ books } />
       <BooksForm />
   </div>
 );
 
-export default App;
+App.propTypes = {
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+};
+
+const mapStateToProps = state => ({ books: state.books });
+
+export default connect(mapStateToProps, null)(App);
