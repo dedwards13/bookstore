@@ -7,9 +7,14 @@ import App from './components/App';
 import rootReducer from './reducers';
 
 const store = createStore(rootReducer);
-ReactDOM.render(
+
+const wrappedApp = (
   <Provider store={store}>
     <App />
-  </Provider>,
+  </Provider>
+);
+
+ReactDOM.render(
+  wrappedApp,
   document.getElementById('root'),
 );
