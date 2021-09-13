@@ -16,7 +16,13 @@ const defaultState = [
 const booksReducer = (state = defaultState, action) => {
   switch (action.type) {
     case CREATE_BOOK:
-      return { ...state, book: action.book };
+      return [
+        ...state, {
+          id: getRandomIntInclusive(1, 1000),
+          title: action.book.title,
+          category: action.book.category,
+        },
+      ];
     case REMOVE_BOOK:
       return state.filter(book => book.id !== action.book.id);
     default:

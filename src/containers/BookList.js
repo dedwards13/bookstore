@@ -5,13 +5,9 @@ import Book from '../components/Book';
 import { deleteBook } from '../actions';
 
 const BookList = ({ books, delete: handleRemoveBook }) => (
-  <div>
-    {
-      books.map(
-        book => <Book book={book} key={book.id} delete={handleRemoveBook} />,
-      )
-    }
-  </div>
+  books.map(
+    book => <Book book={book} key={book.id} delete={handleRemoveBook} />,
+  )
 );
 
 BookList.propTypes = {
@@ -22,11 +18,12 @@ BookList.propTypes = {
       category: PropTypes.string.isRequired,
     }),
   ).isRequired,
-  delete: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({ books: state.books });
 
-const mapDispatchToProps = dispatch => ({ delete: book => dispatch(deleteBook(book)) });
+const mapDispatchToProps = dispatch => ({
+  delete: book => dispatch(deleteBook(book)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookList);
