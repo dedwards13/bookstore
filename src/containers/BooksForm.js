@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import React, { useState } from 'react';
 import { createBook } from '../actions';
 import { CATEGORIES } from '../components/CategoryFilter';
+import '../stylesheets/BooksForm.css';
 
 const BooksForm = ({ create }) => {
   const [book, setBook] = useState({ title: '', category: '' });
