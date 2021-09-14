@@ -9,19 +9,19 @@ export const getRandomIntInclusive = (minimum, maximum) => {
 const defaultState = [
   {
     id: getRandomIntInclusive(1, 1000),
-    title: 'Star Wars',
+    title: 'Genghis Khan',
+    category: 'History',
+    visible: true,
+  },
+  {
+    id: getRandomIntInclusive(1, 1000),
+    title: 'The Martian',
     category: 'Sci-Fi',
     visible: true,
   },
   {
     id: getRandomIntInclusive(1, 1000),
-    title: 'Alien',
-    category: 'Sci-Fi',
-    visible: true,
-  },
-  {
-    id: getRandomIntInclusive(1, 1000),
-    title: 'Freddie Krugger',
+    title: 'House of Leaves',
     category: 'Horror',
     visible: true,
   },
