@@ -20,18 +20,23 @@ const Book = ({ book, delete: handleRemoveBook }) => (
       <div className="lower-btns fw-300 flex align-c">
         <p className="pointer">Comments</p>
         <div className="btn-divider" />
-        <button className="rmv-btn fw-300 pointer" type="button"
-          onClick={() => handleRemoveBook(book)}>Remove</button>
+        <button
+          className="rmv-btn fw-300 pointer"
+          type="button"
+          onClick={() => handleRemoveBook(book)}
+        >
+          Remove
+        </button>
         <div className="btn-divider" />
         <p className="pointer">Edit</p>
       </div>
     </div>
 
-      <div className="progress flex align-c">
-        <i className="porcentage-oval flex align-c"/>
-        <div className="porcentage-cont">
-          <p className="porcentage">64%</p>
-          <p className="completed op-5">Completed</p>
+    <div className="progress flex align-c">
+      <i className="porcentage-oval flex align-c" />
+      <div className="porcentage-cont">
+        <p className="porcentage">64%</p>
+        <p className="completed op-5">Completed</p>
       </div>
     </div>
 
