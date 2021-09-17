@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../stylesheets/App.css';
 import { connect } from 'react-redux';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 import CategoryFilter from './CategoryFilter';
-import '../stylesheets/NavBar.css';
 import { CHANGE_FILTER, CHANGE_VISIBILITY } from '../actions';
 
 const NavBar = ({ handleChangeFilter: changeFilter, handleVisibility: changeVisibity }) => {
@@ -12,14 +14,20 @@ const NavBar = ({ handleChangeFilter: changeFilter, handleVisibility: changeVisi
     changeVisibity(e.target.value);
   };
   return (
-    <nav className="d-flex flex-column flex-md-row">
-      <div className="nav-links d-flex flex-column flex-md-row">
-        <h1 className="title"><Link to="/">BookStore CMS</Link></h1>
-        <h2 className="books"><Link to="/books">BOOKS</Link></h2>
-        <h2 className="categories"><CategoryFilter handleFilter={handleFilter} /></h2>
-      </div>
-      <span className="login"><Link to="/login" className="fa fa-user-circle" /></span>
-    </nav>
+    <>
+      <header>
+        <nav className="p-100 nav pos-rel flex">
+          <h1 className="title pointer"><Link to="/">BookStore CMS</Link></h1>
+          <div className="right-cont align-c flex">
+            <p className="book-header-title pointer"><Link to="/books">BOOKS</Link></p>
+            <CategoryFilter handleFilter={handleFilter} />
+          </div>
+          <div className="prof pointer flex align-c just-c">
+            <FontAwesomeIcon icon={faUser} />
+          </div>
+        </nav>
+      </header>
+    </>
   );
 };
 
