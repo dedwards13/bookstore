@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import React, { useState } from 'react';
 import { createBook } from '../actions';
 import { CATEGORIES } from '../components/CategoryFilter';
-import '../stylesheets/BooksForm.css';
 
 const BooksForm = ({ create }) => {
   const [book, setBook] = useState({ title: '', category: '' });
@@ -27,7 +26,7 @@ const BooksForm = ({ create }) => {
 
   return (
     <form className="row g-3 form-book">
-      <h1 className="add-book col-12">ADD NEW BOOK</h1>
+      <h2 className="add-book col-12">ADD NEW BOOK</h2>
       <div className="col-md-6">
         <input
           type="text"
@@ -45,8 +44,8 @@ const BooksForm = ({ create }) => {
           }
         </select>
       </div>
-      <div className="col-md-1">
-        <button type="button" onClick={handleSubmit} className="btn btn-create">Create book</button>
+      <div className="col-md-2">
+        <button type="button" onClick={handleSubmit} className="add-btntwo">Create book</button>
       </div>
     </form>
   );

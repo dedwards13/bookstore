@@ -63,7 +63,7 @@ li {
 }
 
 .nav {
-  padding: 30px 100px;
+  padding: 30px;
   background-color: #fff;
   border-bottom: 2px solid var(--gray);
   margin-bottom: calc(38px - 15px);
@@ -72,6 +72,9 @@ li {
 .title {
   color: var(--azure);
   font-size: 30px;
+  font-weight: bolder;
+  text-decoration: none;
+  margin-left: 0;
 }
 
 .right-cont {
@@ -84,6 +87,7 @@ li {
   font-size: 15px;
   letter-spacing: 1.9px;
   color: var(--black);
+  margin-top: 15px;
 }
 
 .category-header-title {
@@ -92,6 +96,16 @@ li {
   letter-spacing: 1.9px;
   text-transform: uppercase;
   margin-right: 10px;
+}
+
+.first-container {
+  width: 20%;
+}
+
+.second-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
 }
 
 .prof {
@@ -114,7 +128,6 @@ li {
 
 .book-card {
   font-family: 'Roboto Slab', sans-serif;
-  background-color: white;
   margin: 15px 0;
   padding: 32px 147px 26px 27px;
   border: solid 1px var(--gray);
@@ -143,6 +156,10 @@ li {
   font-size: 14px;
 }
 
+.lower-btns p {
+  margin-top: 15px;
+}
+
 .rmv-btn {
   border: 0;
   background-color: transparent;
@@ -158,9 +175,43 @@ li {
   border: solid 1px var(--gray);
 }
 
+.main-info {
+  background-color: white;
+}
+
 .progress {
   position: absolute;
   right: 40%;
+}
+
+.book-info {
+  display: flex;
+  position: relative;
+  width: 35%;
+  height: 132px;
+  left: 25%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.wrap-oval {
+  padding: 10px;
+}
+
+.wrapporcentage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Oval-2 {
+  width: 68px;
+  height: 68px;
+  left: -60px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 50%;
+  border-color: var(--medium-blue);
 }
 
 .porcentage-oval {
@@ -174,15 +225,15 @@ li {
 }
 
 .porcentage-oval span {
-  background: #fff;
   display: block;
   width: 58px;
   height: 58px;
   border-radius: 50%;
 }
 
-.porcentage {
+.percentage {
   font-size: 32px;
+  padding-left: 15px;
   font-family: 'Montserrat', sans-serif;
   color: var(--black);
 }
@@ -191,11 +242,12 @@ li {
   font-family: 'Montserrat', sans-serif;
   color: var(--black);
   font-size: 14px;
+  padding-left: 15px;
 }
 
 .divider {
   width: 2px;
-  height: 70px;
+  height: 70%;
   border: 1px solid var(--gray);
   position: absolute;
   right: 400px;
@@ -204,6 +256,7 @@ li {
 .chapter-cont {
   position: absolute;
   right: 180px;
+  height: 132px;
 }
 
 .current-ch {
@@ -246,8 +299,9 @@ li {
   margin-bottom: 100px;
 }
 
-.add-new-book {
-  font-size: 20px;
+.add-book {
+  font-size: 30px;
+  font-weight: bolder;
   letter-spacing: -0.18px;
   color: #888;
   margin-bottom: 20px;
@@ -282,6 +336,18 @@ li {
   font-size: 13px;
   color: white;
   font-weight: bold;
+  background-color: var(--azure);
+  border-radius: 3px;
+  border: 1px solid var(--gray);
+}
+
+.add-btntwo {
+  padding: 10px;
+  width: 100%;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  color: white;
+  font-family: 'Roboto Slab', sans-serif;
   background-color: var(--azure);
   border-radius: 3px;
   border: 1px solid var(--gray);

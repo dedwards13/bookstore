@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../stylesheets/App.css';
 import { connect } from 'react-redux';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -17,9 +16,9 @@ const NavBar = ({ handleChangeFilter: changeFilter, handleVisibility: changeVisi
     <>
       <header>
         <nav className="p-100 nav pos-rel flex">
-          <h1 className="title pointer"><Link to="/">BookStore CMS</Link></h1>
+          <h1 className="title pointer">BookStore CMS</h1>
           <div className="right-cont align-c flex">
-            <p className="book-header-title pointer"><Link to="/books">BOOKS</Link></p>
+            <p className="book-header-title pointer">BOOKS</p>
             <CategoryFilter handleFilter={handleFilter} />
           </div>
           <div className="prof pointer flex align-c just-c">

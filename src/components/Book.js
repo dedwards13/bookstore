@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../stylesheets/Book.css';
 
 const Book = ({ book, delete: handleRemoveBook }) => (
   <li className={`${book.visible ? 'book-card flex align-c' : 'd-none'}`}>
-    <div>
+    <div className="first-container">
       <div className="main-info">
         <div>
           <h4 className="book-cat op-5">{book.category}</h4>
@@ -32,22 +31,26 @@ const Book = ({ book, delete: handleRemoveBook }) => (
       </div>
     </div>
 
-    <div className="progress flex align-c">
-      <i className="porcentage-oval flex align-c" />
-      <div className="porcentage-cont">
-        <p className="porcentage">64%</p>
-        <p className="completed op-5">Completed</p>
+    <div className="second-container">
+      <div className="book-info position-relative">
+        <div className="wrap-oval">
+          <i className="Oval-2 d-none d-md-flex" />
+        </div>
+        <div className="wrapporcentage">
+          <span className="percentage">68%</span>
+          <span className="completed">Completed</span>
+        </div>
       </div>
-    </div>
 
-    <div className="divider" />
+      <div className="divider" />
 
-    <div className="chapter-cont">
-      <p className="current-ch fw-300 op-5">CURRENT CHAPTER</p>
-      <p className="chapter fw-300">Chapter 17</p>
-      <button type="button" className="updt-progress fw-300 pointer" onClick={() => handleRemoveBook(book)}>
-        Update Progress
-      </button>
+      <div className="chapter-cont">
+        <p className="current-ch fw-300 op-5">CURRENT CHAPTER</p>
+        <p className="chapter fw-300">Chapter 17</p>
+        <button type="button" className="updt-progress fw-300 pointer" onClick={() => handleRemoveBook(book)}>
+          Update Progress
+        </button>
+      </div>
     </div>
   </li>
 );
