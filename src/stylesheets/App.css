@@ -90,12 +90,13 @@ li {
   margin-top: 15px;
 }
 
-.category-header-title {
-  color: var(--black);
-  font-size: 15px;
-  letter-spacing: 1.9px;
+#filterCategories {
   text-transform: uppercase;
+  color: gray;
+  font-size: 15px;
   margin-right: 10px;
+  letter-spacing: 1.9px;
+  border-color: white;
 }
 
 .first-container {

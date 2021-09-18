@@ -13,9 +13,8 @@ export const CATEGORIES = [
 
 const CategoryFilter = ({ handleFilter }) => (
   <label htmlFor="filterCategories" className="flex align-c">
-    <span className="category-header-title op-5">Categories</span>
     <select name="filterCategories" onChange={handleFilter} id="filterCategories" className="pointer">
-      <option value="All">All</option>
+      <option value="All">Categories</option>
       {
         CATEGORIES.map(category => (
           <option value={category.name} key={category.key}>
