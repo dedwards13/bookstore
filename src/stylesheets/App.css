@@ -134,6 +134,7 @@ li {
   border: solid 1px var(--gray);
   border-radius: 4px;
   position: relative;
+  background-color: white;
 }
 
 .book-cat {
